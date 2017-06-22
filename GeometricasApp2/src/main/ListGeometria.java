@@ -26,12 +26,21 @@ public class ListGeometria {
 		listGeo = copyListGeo;
 	}
 	
+	public void remove(Geometria geo){
+		Geometria[] copyListGeo = new Geometria[listGeo.length-1];
+		for(int i=0, j=0;i<listGeo.length;i++){
+			if(listGeo.equals(geo))
+			copyListGeo[j++]=listGeo[i];
+		}
+		listGeo = copyListGeo;
+	}
+	
 	public Geometria[] sortByLados(Geometria[] arrayGeo){
 		
 		return null;
 	}
 	
-	public int getSize(){
+	public int size(){
 		return listGeo.length;
 	}
 	
