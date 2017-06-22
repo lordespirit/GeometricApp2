@@ -35,13 +35,35 @@ public class ListGeometria {
 		listGeo = copyListGeo;
 	}
 	
-	public Geometria[] sortByLados(Geometria[] arrayGeo){
+	/**
+	 * Método de ordenación
+	 * Si se añaden dos figuras con los mismos lados entonces la primera en haber sido añadida será la primera.
+	 */
+	public void sortByLados(){
+		Geometria[] copyListGeo = new Geometria[listGeo.length];
 		
-		return null;
+		// COPIA
+			copyListGeo = listGeo;
+
+		// ORDENACION
+		for(int i=1;i<copyListGeo.length;i++){
+			if(copyListGeo[i].getLados()<copyListGeo[i-1].getLados()){
+				Geometria control = copyListGeo[i];
+				copyListGeo[i] = copyListGeo[i-1];
+				copyListGeo[i-1] = control;
+				i=0;
+			}
+		}
+		
+		listGeo = copyListGeo;
 	}
 	
 	public int size(){
 		return listGeo.length;
+	}
+	
+	public Geometria get(int index){
+		return listGeo[index];
 	}
 	
 	
