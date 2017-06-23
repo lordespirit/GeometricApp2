@@ -2,7 +2,7 @@ package main;
 
 public class Elipse extends Geometria {
 	
-	final private int ladosElipse = Integer.MAX_VALUE;
+	final private int lados = Integer.MAX_VALUE;
 	final private float  PI = 3.141592653589f;
 	private float radioMayor;
 	private float radioMenor;
@@ -10,7 +10,7 @@ public class Elipse extends Geometria {
 	public Elipse(float radioMayor, float radioMenor){
 		this.radioMayor = radioMayor;
 		this.radioMenor = radioMenor;
-		this.setLados(ladosElipse);
+		this.setLados(lados);
 	}
 	
 	@Override
@@ -22,4 +22,10 @@ public class Elipse extends Geometria {
 	public float getArea(){
 		return PI*radioMayor*radioMenor;
 	}
+	
+	@Override
+	public String toString(){
+		return "Elipse\t\t | Lados : " + lados + " | Perimetro : " + getPerimetro() + " | Area : " + getArea();
+	}
+	
 }

@@ -2,12 +2,12 @@ package main;
 
 public class Hexagono extends Geometria {
 
-	final private int ladosHexagono = 6;
+	final private int lados = 6;
 	private float lado;
 	
 	public Hexagono(float lado){
 		this.lado=lado;
-		this.setLados(ladosHexagono);
+		this.setLados(lados);
 	}
 	
 	@Override
@@ -23,6 +23,11 @@ public class Hexagono extends Geometria {
 		return 3*lado*apotema;
 		 */
 		return (float) (3*Math.sqrt(3)*lado*lado)/2;
+	}
+	
+	@Override
+	public String toString(){
+		return "Hexagono\t | Lados : " + lados + " | Perimetro : " + getPerimetro() + " | Area : " + getArea();
 	}
 	
 }

@@ -20,5 +20,10 @@ public class Circulo extends Geometria {
 	public float getArea(){
 		return (float) (PI * Math.pow(radio, 2));
 	}
+	
+	@Override
+	public String toString(){
+		return "Circulo\t\t | Lados : " + ladosCirculo + " | Perimetro : " + getPerimetro() + " | Area : " + getArea();
+	}
 
 }

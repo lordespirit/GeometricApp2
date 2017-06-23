@@ -18,6 +18,11 @@ public class Triangulo extends Geometria {
 	}
 	
 	@Override
+	public String toString(){
+		return null;
+	}
+	
+	@Override
 	public float getArea(){
 			return ((base*altura)/2);
 	}
@@ -29,4 +34,6 @@ public class Triangulo extends Geometria {
 	public float getBase() {
 		return base;
 	}
+	
+	
 }

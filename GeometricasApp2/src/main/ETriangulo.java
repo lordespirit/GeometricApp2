@@ -23,7 +23,7 @@ public class ETriangulo extends Triangulo{
 
 	@Override
 	public String toString(){
-		return "Triangulo Equilatero. Número de lados: " + getLados() + " cm";
+		return "Triangulo Equi\t | Lados : " + getLados() + " | Perimetro : " + getPerimetro() + " | Area : " + getArea();
 	}
 
 }

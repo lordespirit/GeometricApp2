@@ -15,6 +15,8 @@ public abstract class Geometria {
 	}
 	
 	public abstract float getPerimetro();
+	
+	public abstract String toString();
 
 	public int getLados() {
 		return lados;

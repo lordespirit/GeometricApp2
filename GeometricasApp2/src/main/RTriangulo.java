@@ -17,4 +17,9 @@ public class RTriangulo extends Triangulo{
 	public float getArea(){
 		return super.getArea();
 	}
+	
+	@Override
+	public String toString(){
+		return "Triangulo Rec.\t | Lados : " + getLados() + " | Perimetro : " + getPerimetro() + " | Area : " + getArea();
+	}
 }
